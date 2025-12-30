@@ -1,0 +1,60 @@
+{
+  "experiment_setup": {
+    "k": 30,
+    "total_iterations": 15,
+    "description": "Comparing regularization strategies: both W&Z vs only W"
+  },
+  "good_regularization": {
+    "config": {
+      "lambda_w": 1.0,
+      "lambda_z": 1.0,
+      "description": "Regularize both factors W and features Z"
+    },
+    "final_performance": {
+      "train_rmse": 0.27794923799974985,
+      "valid_rmse": 1.0800255120725715,
+      "w_norm": 60.90458794713596,
+      "z_norm": 60.698519156410626
+    },
+    "training_log": [
+      {
+        "iteration": 0,
+        "train_rmse": 6.555394466246338,
+        "w_frobenius_norm": 540.3733405973484,
+        "z_frobenius_norm": 135.14694817531222,
+        "loss_w": 1531647.5785095373,
+        "loss_z": 1257908.9288823,
+        "valid_rmse": 5.500714073541158
+      }
+    ]
+  },
+  "bad_regularization": {
+    "config": {
+      "lambda_w": 1.0,
+      "lambda_z": 0.0,
+      "description": "Only regularize factors W, let features Z grow unconstrained"
+    },
+    "final_performance": {
+      "train_rmse": 0.23385726727238706,
+      "valid_rmse": 1.296932788422671,
+      "w_norm": 46.59655093706378,
+      "z_norm": 186.01986534952482
+    },
+    "training_log": [
+      {
+        "iteration": 0,
+        "train_rmse": 6.517033544683372,
+        "w_frobenius_norm": 540.1423160736947,
+        "z_frobenius_norm": 134.39011999045633,
+        "loss_w": 1508009.1905431012,
+        "loss_z": 1216255.4689296463,
+        "valid_rmse": 5.54207052775709
+      }
+    ]
+  },
+  "key_insights": {
+    "z_norm_explosion": 3.064652448442451,
+    "performance_degradation": 0.21690727635009943,
+    "stability_message": "Without Z regularization, features can grow unbounded while still fitting training data"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "model_info": {
+    "k": 50,
+    "lambda_w": 1.0,
+    "lambda_z": 1.0,
+    "n_users": 610,
+    "n_movies": 9724
+  },
+  "performance_comparison": {
+    "baseline": {
+      "train_rmse": 1.041509355772011,
+      "valid_rmse": 1.0466019531944684,
+      "description": "Predicting average rating for all users/movies"
+    },
+    "collaborative_filtering": {
+      "train_rmse": 0.19946041244769744,
+      "valid_rmse": 1.0773322038404587,
+      "description": "Matrix factorization with k=50 latent factors"
+    }
+  },
+  "improvement": {
+    "train_improvement": 0.8420489433243136,
+    "valid_improvement": -0.03073025064599033,
+    "train_improvement_percent": 80.84890823665728,
+    "valid_improvement_percent": -2.9361927476051983
+  }
+}
