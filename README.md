@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MovieLens Data Explorer
 
-## Getting Started
+This is a simple website that visualizes data from the MovieLens dataset. It tells a story about how movie recommendation systems work, from understanding the raw data to building and improving a prediction model.
 
-First, run the development server:
+## What's Inside?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The project is broken down into interactive chapters:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Chapter 1: The Data**
+    *   See what the MovieLens dataset looks like.
+    *   Explore how many users and movies there are.
+    *   Look at the distribution of ratings (how many 5-star vs 1-star reviews).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Chapter 2: Baseline vs. Model**
+    *   Compare a simple guess (Baseline) against a machine learning model.
+    *   See which one predicts user ratings better.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+*   **Chapter 3: Tuning the Model**
+    *   Explore how changing different settings (hyperparameters) affects the model's accuracy.
+    *   Interactive charts show the trade-offs between different configurations.
 
-## Learn More
+## How to Run It
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Open your browser:**
+    Visit [http://localhost:3000](http://localhost:3000) to see the dashboard.
 
-## Deploy on Vercel
+## Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*   **Next.js** (for the website structure)
+*   **Recharts** (for the charts and graphs)
+*   **Tailwind CSS** (for styling)
