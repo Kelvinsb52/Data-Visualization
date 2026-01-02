@@ -143,9 +143,9 @@ export default function Chapter2({ data }: Chapter2Props) {
                   tickFormatter={(value) => value.toFixed(2)}
                 />
                 <Tooltip 
-                  formatter={(value: any, name: string) => [
+                  formatter={(value: any, name: any) => [
                     value.toFixed(3), 
-                    name.replace('_', ' ').toUpperCase()
+                    String(name).replace('_', ' ').toUpperCase()
                   ]} 
                 />
                 <Legend />
